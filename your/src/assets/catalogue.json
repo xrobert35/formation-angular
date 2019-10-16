@@ -1,0 +1,76 @@
+[
+  {
+    "code" : "N1",
+    "label" : "Niveau 1",
+    "articles" : [
+      {
+        "code" : "A11",
+        "label" : "Article 11"
+      }
+    ],
+    "niveaux" : [
+      {
+        "code" : "N1.1",
+        "label" : "Niveau 1.1",
+        "articles" : [
+          {
+            "code" : "A111",
+            "label" : "Article 111"
+          },
+          {
+            "code" : "A12",
+            "label" : "Article 112"
+          }
+        ]
+      },
+      {
+        "code" : "N1.2",
+        "label" : "Niveau 1.2",
+        "niveaux" : [
+          {
+            "code" : "N1.2.2",
+            "label" : "N1.2.2",
+            "articles" : [
+              {
+                "code" : "A1221",
+                "label" : "Article 1221"
+              }
+            ]
+          }
+        ],
+        "articles" : [
+          {
+            "code" : "A121",
+            "label" : "Article 121"
+          },
+          {
+            "code" : "A122",
+            "label" : "Article 122"
+          }
+        ]
+      },
+      {
+        "code" : "N1.3",
+        "label" : "Niveau 1.3"
+      }
+    ]
+  },
+  {
+    "code" : "N2",
+    "label" : "Niveau 1",
+    "articles" : [
+      {
+        "code" : "A21",
+        "label" : "Article 21"
+      },
+      {
+        "code" : "A22",
+        "label" : "Article 22"
+      },
+      {
+        "code" : "A23",
+        "label" : "Article 23"
+      }
+    ]
+  }
+]

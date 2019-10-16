@@ -1,0 +1,8 @@
+<h3> catalogue</h3>
+
+<div>
+  <span> articles commandés : </span>
+  <span> {{ nbArticlesCommandes }} </span>
+</div>
+
+<app-affichage-niveau *ngFor="let niveau of catalogue" [niveau]="niveau"></app-affichage-niveau>

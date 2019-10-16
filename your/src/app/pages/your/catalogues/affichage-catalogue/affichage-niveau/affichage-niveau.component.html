@@ -1,0 +1,8 @@
+<div class="niveau-container">
+  <h3> {{ niveau.code + ' ' + niveau.label}} </h3>
+
+  <app-affichage-article (onQte)="change" *ngFor="let article of niveau.articles" [article]="article">
+  </app-affichage-article>
+
+  <app-affichage-niveau *ngFor="let niveau of niveau.niveaux" [niveau]="niveau"></app-affichage-niveau>
+</div>

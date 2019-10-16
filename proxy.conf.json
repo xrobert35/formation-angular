@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://10.9.6.125:4081",
+    "secure": false
+  },
+  "/auth": {
+    "target": "http://10.9.6.125:4082",
+    "secure": false
+  }
+}

@@ -1,0 +1,8 @@
+<div class="article-container">
+  <div class="description">
+    <span> {{ article.code }}</span>
+    <span> {{ article.label }}</span>
+  </div>
+  <app-input type="number" [delay]="500" [ngModel]="article.qte" (ngModelChange)="onQteChange($event)"></app-input>
+  <!-- <input type="number" [ngModel]="article.qte" (ngModelChange)="onQteChange($event)"> -->
+</div>

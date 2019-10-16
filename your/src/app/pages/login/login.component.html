@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">​
+
+  <!-- login -->
+  <div class="form-group ">​
+    <app-input label="Email : " id="email" name="email" formControlName="email" [delay]="2000"></app-input>
+    <span *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.required" class="error">
+      This field is required
+    </span>
+  </div>​
+
+  <!-- password -->
+  <div class="form-group">​
+    <app-input label="Password :" type="password" id="pwd" name="pwd" formControlName="password"></app-input>
+    <span *ngIf="loginForm.controls.password.touched && loginForm.controls.password.errors?.required" class="error">
+        This field is required
+      </span>
+  </div>​
+
+  <button type="submit ">Login</button>​
+</form>

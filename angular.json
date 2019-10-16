@@ -11,24 +11,25 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "your/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/td1-angular8",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "your/src/index.html",
+            "main": "your/src/main.ts",
+            "polyfills": "your/src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "your/src/favicon.ico",
+              "your/src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "your/src/styles.less",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           },
@@ -36,8 +37,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "your/src/environments/environment.ts",
+                  "with": "your/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -67,7 +68,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "td1-angular8:build"
+            "browserTarget": "td1-angular8:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -84,16 +86,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "main": "your/src/test.ts",
+            "polyfills": "your/src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "your/src/favicon.ico",
+              "your/src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "your/src/styles.less"
             ],
             "scripts": []
           }

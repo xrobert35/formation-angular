@@ -1,0 +1,39 @@
+<div>
+  <label for="name">
+    Name :
+    <input id="name" [(ngModel)]="name" />
+  </label>
+
+  <label id="description">
+    Description :
+    <input id="content" [(ngModel)]="content" />
+  </label>
+
+  <!-- Ajouter -->
+  <button type="button" (click)="addProduct()"  *ngIf="!productToEdit">
+    <i class="fa fa-plus"></i>
+  </button>
+
+  <!-- Valide l'edition -->
+  <button type="button" (click)="valideEdit()" *ngIf="productToEdit">
+    <i class="fa fa-check"></i>
+  </button>
+
+  <!-- Annuler l'edition -->
+  <button type="button" (click)="endEdit()" *ngIf="productToEdit">
+    <i class="fa fa-times"></i>
+  </button>
+</div>
+
+<ul>
+  <li *ngFor="let product of products" [ngClass]="{ 'invalid':!isProductValide(product) }">
+    ​<span>{{ product.name }}</span> ​
+    <span [innerHTML]="product.content"></span>​
+    <button type="button" (click)="deleteProduct(product)">
+      ​ <i class="fa fa-times-circle"></i>
+    </button>
+    <button [hidden]="isProductValide(product)" (click)="editProduct(product)">
+      <i class="fa fa-edit"></i>
+    </button>
+  </li>
+</ul>
