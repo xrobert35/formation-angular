@@ -14,6 +14,7 @@ import { UserStore } from './store/user.store';
 import { MyHttpInterceptor } from './interceptors/http.interceptor';
 import { ProductService } from './services/product.service';
 import { MyImputComponent } from './components/my-input/my-input.component';
+import { HasRole } from './directives/hasRole.directive';
 
 // liste des modules partages
 const sharedModules = [
@@ -27,7 +28,7 @@ const sharedModules = [
 
 // liste des components partages
 const sharedComponents = [
-  MenuItemDirective, MenuComponent, MyImputComponent
+  MenuItemDirective, MenuComponent, MyImputComponent, HasRole
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '@common/model/user.model';
+import { RoleEnum } from '@common/model/role.enum';
 
 @Injectable()
 export class UserStore {
@@ -11,5 +12,9 @@ export class UserStore {
 
   setUser(user: User) {
     this.user = user;
+  }
+
+  hasRole(role: RoleEnum) {
+    return this.user && this.user.role === role;
   }
 }
